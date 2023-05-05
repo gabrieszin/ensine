@@ -28,3 +28,7 @@ a, button, input, textarea{
   border: unset;
   cursor: pointer;
 }
+
+i{
+  font-style: normal;
+}

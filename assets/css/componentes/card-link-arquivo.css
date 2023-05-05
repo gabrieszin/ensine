@@ -1,0 +1,130 @@
+.card-link-arquivo{
+  position: relative;
+}
+
+.card-link-arquivo .seta::after{
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(-45deg);
+
+  content: "\F138";
+  display: inline-block;
+  font-family: "bootstrap-icons";
+  font-size: inherit;
+  text-rendering: auto;
+}
+
+.card-link-arquivo .icone i::before{
+  content: "\F392";
+  display: inline-block;
+  font-family: "bootstrap-icons";
+  font-size: inherit;
+  text-rendering: auto;
+}
+
+.card-link-arquivo .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo::after{
+  content: "Arquivo";
+}
+
+.card-link-arquivo.site .icone i::before{
+  content: "\F3EF";
+}
+
+.card-link-arquivo.site .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo::after{
+  content: "Site";
+}
+
+.card-link-arquivo.podcast .icone i::before{
+  content: "\F413";
+}
+
+.card-link-arquivo.podcast .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo::after{
+  content: "Podcast";
+}
+
+.card-link-arquivo.pdf .icone i::before{
+  content: "\F63E";
+}
+
+.card-link-arquivo.pdf .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo::after{
+  content: "PDF";
+}
+
+.card-link-arquivo.documento-word .icone i::before{
+  content: "\F38D";
+}
+
+.card-link-arquivo.documento-word .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo::after,
+.card-link-arquivo.documento-excel .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo::after,
+.card-link-arquivo.documento-power-point .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo::after{
+  content: "Documento";
+}
+
+.card-link-arquivo.documento-excel .icone i::before{
+  content: "\F35A";
+}
+
+.card-link-arquivo.documento-power-point .icone i::before{
+  content: "\F366";
+}
+
+.card-link-arquivo.arquivo .icone i::before{
+  content: "\F392";
+}
+
+.card-link-arquivo.arquivo .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo::after{
+  content: "Arquivo";
+}
+
+.card-link-arquivo.video .icone i::before{
+  content: "\F4F3";
+}
+
+.card-link-arquivo.video .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo::after{
+  content: "Vídeo";
+}
+
+.card-link-arquivo .icone{
+
+}
+
+.card-link-arquivo .conteudo{
+
+}
+
+.card-link-arquivo .conteudo .conteudo-cabecalho{
+
+}
+
+.card-link-arquivo .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo{
+
+}
+
+.card-link-arquivo .conteudo .conteudo-cabecalho .conteudo-cabecalho-nome{
+
+}
+
+.card-link-arquivo .conteudo .conteudo-rodape{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-link-arquivo .conteudo .conteudo-rodape .conteudo-rodape-upload::before{
+  content: "Upload:";
+  margin-right: 0.5rem;
+}
+
+.card-link-arquivo .conteudo .conteudo-rodape .conteudo-rodape-upload{
+
+}
+
+.card-link-arquivo .conteudo .conteudo-rodape .conteudo-rodape-tamanho::before{
+  content: "Tamanho:";
+  margin-right: 0.5rem;
+}
+
+.card-link-arquivo .conteudo .conteudo-rodape .conteudo-rodape-tamanho{
+
+}
