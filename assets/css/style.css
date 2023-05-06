@@ -18,6 +18,8 @@ html{
 
 body{
   font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--branco);
+  color: var(--cinza-escuro);
 }
 
 .none{

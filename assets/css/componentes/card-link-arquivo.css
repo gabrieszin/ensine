@@ -1,18 +1,40 @@
 .card-link-arquivo{
   position: relative;
+  background-color: var(--cinza-claro);
+  width: min(100% - 1rem, 450px);
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  padding: 1rem;
+  border-radius: 10px;
 }
 
-.card-link-arquivo .seta::after{
+.card-link-arquivo :where(.seta){
   position: absolute;
   top: 0;
   right: 0;
-  transform: rotate(-45deg);
+  padding: 0 0.5rem;
+  color: var(--branco);
+  background-color: var(--cinza);
+  border-radius: 0px 10px 0px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  content: "\F138";
-  display: inline-block;
-  font-family: "bootstrap-icons";
-  font-size: inherit;
-  text-rendering: auto;
+.card-link-arquivo:is(:hover, :focus) :is(.seta, i.seta-icone){
+  background-color: var(--cinza);
+  display: block;
+}
+
+.card-link-arquivo  i.seta-icone::before{
+  display: block;
+  content: "↗";
+  margin-bottom: 0.75rem;
+  margin-left: 0.5rem;
+  font-size: 1.25rem;
 }
 
 .card-link-arquivo .icone i::before{
@@ -21,6 +43,9 @@
   font-family: "bootstrap-icons";
   font-size: inherit;
   text-rendering: auto;
+  display: inline-block;
+  font-size: 2.187rem;
+  padding-right: 1rem;
 }
 
 .card-link-arquivo .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo::after{
@@ -29,6 +54,11 @@
 
 .card-link-arquivo.site .icone i::before{
   content: "\F3EF";
+  color: var(--roxo);
+}
+
+.card-link-arquivo.site .seta{
+  background-color: var(--roxo);
 }
 
 .card-link-arquivo.site .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo::after{
@@ -37,6 +67,11 @@
 
 .card-link-arquivo.podcast .icone i::before{
   content: "\F413";
+  color: var(--verde);
+}
+
+.card-link-arquivo.podcast .seta{
+  background-color: var(--verde);
 }
 
 .card-link-arquivo.podcast .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo::after{
@@ -45,6 +80,11 @@
 
 .card-link-arquivo.pdf .icone i::before{
   content: "\F63E";
+  color: var(--laranja-escuro);
+}
+
+.card-link-arquivo.pdf .seta{
+  background-color: var(--laranja-escuro);
 }
 
 .card-link-arquivo.pdf .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo::after{
@@ -53,6 +93,11 @@
 
 .card-link-arquivo.documento-word .icone i::before{
   content: "\F38D";
+  color: var(--azul);
+}
+
+.card-link-arquivo.documento-word .seta{
+  background-color: var(--azul);
 }
 
 .card-link-arquivo.documento-word .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo::after,
@@ -63,14 +108,29 @@
 
 .card-link-arquivo.documento-excel .icone i::before{
   content: "\F35A";
+  color: var(--verde-escuro);
+}
+
+.card-link-arquivo.documento-excel .seta{
+  background-color: var(--verde-escuro);
 }
 
 .card-link-arquivo.documento-power-point .icone i::before{
   content: "\F366";
+  color: var(--laranja);
+}
+
+.card-link-arquivo.documento-power-point .seta{
+  background-color: var(--laranja);
 }
 
 .card-link-arquivo.arquivo .icone i::before{
   content: "\F392";
+  color: var(--cinza);
+}
+
+.card-link-arquivo.arquivo .seta{
+  background-color: var(--cinza);
 }
 
 .card-link-arquivo.arquivo .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo::after{
@@ -79,6 +139,11 @@
 
 .card-link-arquivo.video .icone i::before{
   content: "\F4F3";
+  color: var(--vermelho);
+}
+
+.card-link-arquivo.video .seta{
+  background-color: var(--vermelho);
 }
 
 .card-link-arquivo.video .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo::after{
@@ -86,28 +151,41 @@
 }
 
 .card-link-arquivo .icone{
-
+  color: var(--cinza);
+  align-items: center;
+  justify-content: center;
 }
 
 .card-link-arquivo .conteudo{
-
+  border-left: 1px solid var(--cinza-claro-forte);
+  padding-left: 1.25rem;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .card-link-arquivo .conteudo .conteudo-cabecalho{
-
+  color: var(--cinza);
 }
 
 .card-link-arquivo .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo{
-
+  font-weight: 600;
+  color: var(--cinza);
 }
 
 .card-link-arquivo .conteudo .conteudo-cabecalho .conteudo-cabecalho-nome{
-
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--cinza-escuro);
 }
 
 .card-link-arquivo .conteudo .conteudo-rodape{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -117,14 +195,15 @@
 }
 
 .card-link-arquivo .conteudo .conteudo-rodape .conteudo-rodape-upload{
-
+  color: var(--cinza);
 }
 
 .card-link-arquivo .conteudo .conteudo-rodape .conteudo-rodape-tamanho::before{
   content: "Tamanho:";
   margin-right: 0.5rem;
+  color: var(--cinza);
 }
 
 .card-link-arquivo .conteudo .conteudo-rodape .conteudo-rodape-tamanho{
-
+  color: var(--cinza-escuro);
 }
