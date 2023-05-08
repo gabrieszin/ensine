@@ -1,18 +1,17 @@
-.paragrafos-grupo{
+.paragrafos-grupo,
+.paragrafo-unico{
   margin: var(--margin-componentes-layout);
+  display: inline-block;
+}
+
+.paragrafos-grupo{
   margin-top: 2rem;
-  display: flex;
-  align-content: first baseline;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  flex-direction: row;
-  /* grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); */
-  /* grid-column-gap: 2rem; */
+  column-count: 2;
+  column-gap: 2rem;
 }
 
 .paragrafo{
   align-items: center;
-  width: calc(50% - 1rem);
   display: block;
   margin-bottom: 1rem;
   line-height: 1.75;
@@ -57,6 +56,10 @@
 
 .paragrafos-grupo .imagem-grupo :is(.imagem, .descricao){
   width: 100%;
+}
+
+.paragrafos-grupo .imagem-grupo{
+  margin-top: 0;
 }
 
 @media screen and (max-width: 500px) {

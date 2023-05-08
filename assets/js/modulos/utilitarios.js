@@ -49,15 +49,41 @@ function sanitizarString(string){
         subst: ''
       },
     ]
-
+    
     substituir.forEach(substituicao => {
       string = string.replace(substituicao.original, substituicao.subst)
     })
-
+    
     return string.trim();
   }else{
     console.log('O tipo do parâmetro passado não é uma string.');
     return null;
+  }
+}
+
+const pegarNomeDominio = (url) => {
+  try{
+    const urlOutro = new URL(url).host.toString().split('.');
+    let marca_dominio = '';
+
+    const procurar = urlOutro[(urlOutro.length - 1)];
+
+    if(urlOutro.indexOf(`${procurar}`) >= 0){
+      marca_dominio = urlOutro.indexOf(`${procurar}`);
+    }else if(urlOutro.indexOf(`${procurar}/`) >= 0){
+      marca_dominio = urlOutro.indexOf(`${procurar}/`);
+    }else{
+      marca_dominio = null;
+    }
+    
+    if(marca_dominio !== null){
+      const nomeDominio = urlOutro[marca_dominio - 1];
+      return nomeDominio.charAt(0).toUpperCase() + nomeDominio.substring(1, nomeDominio.length).toLowerCase();
+    } else {
+      return null;
+    }
+  }catch(error){
+    
   }
 }
 
@@ -66,5 +92,6 @@ export{
   capitalize,
   atualizarDatas,
   controleFechamentoModal,
-  sanitizarString
+  sanitizarString,
+  pegarNomeDominio
 }

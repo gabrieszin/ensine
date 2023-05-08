@@ -13,7 +13,7 @@
 @import url(./componentes/card-link-arquivo.css);
 @import url(./componentes/imagem-grupo.css);
 @import url(./componentes/codigos.css);
-@import url(./componentes/paragrafos-grupo.css);
+@import url(./componentes/paragrafos.css);
 
 html{
   scroll-behavior: smooth;
@@ -34,4 +34,14 @@ body{
 
 .block{
   display: block;
+}
+
+.tooltip-href-link{
+  --bs-tooltip-bg: var(--azul);
+  --bs-tooltip-color: var(--branco);
+  --bs-tooltip-opacity: 1;
+  --bs-tooltip-margin: 1rem;
+}
+abbr{
+  cursor: help;
 }

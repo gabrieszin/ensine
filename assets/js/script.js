@@ -1,5 +1,7 @@
 "use strict";
 
+import { pegarNomeDominio } from './modulos/utilitarios.js';
+
 (() => {  
   function renderTooltips(){
     $(function () {
@@ -63,35 +65,6 @@
   })
 
   /* Sobre elementos de texto */
-  // const paragrafos_grupos = document.querySelectorAll('.paragrafos-grupo');
-  // paragrafos_grupos.forEach(paragrafos => {
-  //   const quantidade = paragrafos.querySelectorAll('p.paragrafo').length;
-
-  //   if(quantidade > 1){
-  //     //2 colunas necessárias
-  //     paragrafos.style.gridTemplateColumns = `repeat(2, minmax(calc(50% - 1rem), 1fr))`;
-  //     const metade = (quantidade, Math.ceil(quantidade / 2));
-
-  //     if(metade >= 2){
-  //       paragrafos.style.gridTemplateRows = `repeat(${quantidade}, auto)`;
-
-  //       paragrafos.querySelectorAll('p.paragrafo').forEach((paragrafo, index) => {
-  //         console.log(paragrafo)
-  //         if((index + 1) <= metade){
-  //           paragrafo.style.gridColumn = `1/2`;
-  //         }else{
-  //           paragrafo.style.gridColumn = `2/2`
-  //         }
-  //         paragrafo.style.gridRow = `${index + 1}/${metade}`;
-  //         console.log(`${index + 1}/${metade}`, index % 2)
-  //         // `grid-row: ${index + 1}/${metade}`;
-  //       })
-  //     }
-  //   }
-
-  //   // paragrafos.style.gridTemplateColumns = `repeat(${paragrafos.childElementCount}, calc(50 - 1rem))`;
-  // })
-
   const abbrs = document.querySelectorAll('abbr');
   abbrs.forEach(abbr => {
     abbr.setAttribute('tabindex', '0');
@@ -101,5 +74,14 @@
     abbr.setAttribute('data-bs-content', `${abbr.title}`);
   })
   renderPopovers();
+
+  const links = document.querySelectorAll('.paragrafo > [href]');
+  links.forEach(link => {
+    link.dataset.toggle = 'tooltip';
+    link.dataset.placement = 'top';
+    link.dataset.bsCustomClass = 'tooltip-href-link';
+    link.title = `${pegarNomeDominio(link.href)}`
+  });
+  renderTooltips();
   
 })();
