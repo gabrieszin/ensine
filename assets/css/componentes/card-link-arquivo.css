@@ -1,14 +1,16 @@
 .card-link-arquivo{
+  margin: var(--margin-componentes-layout);
   position: relative;
   background-color: var(--cinza-claro);
   width: min(100% - 1rem, 450px);
-  margin-inline: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: stretch;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 10px;
+  user-select: none;
+  font-size: 0.85rem;
 }
 
 .card-link-arquivo :where(.seta){
@@ -49,6 +51,7 @@
 }
 
 .card-link-arquivo .conteudo .conteudo-cabecalho .conteudo-cabecalho-tipo::after{
+  /* font-family: 'Arial', sans-serif; */
   content: "Arquivo";
 }
 
@@ -178,7 +181,7 @@
   margin-top: 0.4rem;
   margin-bottom: 1rem;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--cinza-escuro);
 }
 
@@ -191,19 +194,40 @@
 
 .card-link-arquivo .conteudo .conteudo-rodape .conteudo-rodape-upload::before{
   content: "Upload:";
-  margin-right: 0.5rem;
+  margin-right: 0.25rem;
+  /* font-family: 'Arial', sans-serif; */
 }
 
 .card-link-arquivo .conteudo .conteudo-rodape .conteudo-rodape-upload{
   color: var(--cinza);
+  /* font-family: 'Arial', sans-serif; */
 }
 
 .card-link-arquivo .conteudo .conteudo-rodape .conteudo-rodape-tamanho::before{
   content: "Tamanho:";
-  margin-right: 0.5rem;
+  margin-right: 0.25rem;
   color: var(--cinza);
+  /* font-family: 'Arial', sans-serif; */
 }
 
 .card-link-arquivo .conteudo .conteudo-rodape .conteudo-rodape-tamanho{
   color: var(--cinza-escuro);
+  /* font-family: 'Arial', sans-serif; */
+}
+
+@media screen and (max-width: 450px) {
+  .card-link-arquivo{
+    margin-inline: auto;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .card-link-arquivo .icone{
+    display: none
+  }
+
+  .card-link-arquivo .conteudo{
+    border-left: unset;
+    padding-left: 0;
+  }
 }

@@ -31,7 +31,7 @@
   -->
   
   <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/frameworks/highlights-A11Y-dark.css">
+  <link rel="stylesheet" href="./assets/css/frameworks/highlights-A11Y-default.css">
   
   <link rel="shortcut icon" href="./assets/img/#" type="image/x-icon">
   
@@ -40,13 +40,13 @@
   <script src="./assets/js/frameworks/jquery.js" defer></script>
   <script src="./assets/js/frameworks/bootstrap.js" defer></script>
   <script src="./assets/js/frameworks/pooper.js" defer></script>
-  <script src="./assets/js/frameworks/highlights.js" defer></script>
+  <script src="./assets/js/frameworks/highlights.js" ></script>
   <script src="./assets/js/frameworks/sweet-alert.js" defer></script>
   <script src="./assets/js/frameworks/jquery-mask.js" defer></script>
   <script src="./assets/js/frameworks/moment.js" defer></script>
   <script type="module" src="./assets/js/script.js" defer></script>
 </head>
-<body>
+<body class="container">
   
   <noscript>
     <div class="box-no-script">         
@@ -65,6 +65,7 @@
   
   <main>
     <section>
+      <!-- Arquivos em anexos destacados -->
       <a class="card-link-arquivo arquivo">
         <span class="seta">
           <i class="seta-icone"></i>
@@ -83,8 +84,60 @@
           </div>
         </div>
       </a>
+      
+      <!-- Grupo de imagens com legenda -->
+      <figure class="imagem-grupo">
+        <div src="" alt="" class="imagem"></div>
+        <figcaption class="descricao">
+          <span class="descricao-contador-imagem">1</span>
+          <p class="descricao-conteudo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ducimus corrupti vero illum ea sequi, molestias laudantium enim perferendis quia illo ab ut velit eum nostrum aperiam! Ratione, ea at.
+          </p>
+        </figcaption>
+      </figure>
+      
+      <!-- Trecho de código -->
+      <div class='codigos'>
+        <pre class="codigo"><code class="language-javascript" contentEditable="false" data-conteudo-codigo>
+          function $initHighlight(block, cls) {
+            &nbsp;/*Code*/
+          }
+          
+          export  $initHighlight;
+        </code><button class="codigo__btn-copiar ok" data-acao-copiar-codigo><i></i><span>Copiar o <br> código acima</span></button></pre>
+      </div>
+
+      <!-- Parágrafos de texto -->
+      <div class="paragrafos-grupo">
+        <p class="paragrafo">
+          Lorem ipsum dolor sit amet consectetur <a href="" target="_blank">abrir o site</a> adipisicing elit. Dignissimos itaque, laudantium saepe delectus dolore dolorum vitae eligendi pariatur repudiandae <a href="">ir para</a> officia alias quo optio maxime minima porro sunt incidunt. Voluptatibus, ab? Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dicta quo nihil, hic quasi autem saepe pariatur ut reprehenderit? Asperiores consectetur est ipsam autem, veritatis numquam error. Nihil, sit temporibus?
+        </p>
+        <p class="paragrafo">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit natus <abbr title="Significado para a palavra">WEB</abbr> reprehenderit accusantium perferendis totam fugit obcaecati minus libero delectus, earum porro rerum magnam saepe ducimus ad iste mollitia optio incidunt.
+        </p>
+        <p class="paragrafo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, porro quibusdam odit provident doloribus architecto, nihil qui voluptatibus officia numquam voluptas reprehenderit aut tenetur placeat inventore eaque unde ipsa nobis.
+        </p>
+        <p class="paragrafo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, porro quibusdam odit provident doloribus architecto, nihil qui voluptatibus officia numquam voluptas reprehenderit aut tenetur placeat inventore eaque unde ipsa nobis.
+        </p>
+        <!-- <p class="paragrafo">
+          <figure class="imagem-grupo">
+            <div src="" alt="" class="imagem"></div>
+            <figcaption class="descricao">
+              <span class="descricao-contador-imagem">1</span>
+              <p class="descricao-conteudo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ducimus corrupti vero illum ea sequi, molestias laudantium enim perferendis quia illo ab ut velit eum nostrum aperiam! Ratione, ea at.
+              </p>
+            </figcaption>
+          </figure>
+        </p> -->
+      </div>
     </section>
   </main>
   
+  <script defer>
+    hljs.highlightAll();
+  </script>
 </body>
 </html>

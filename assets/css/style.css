@@ -11,15 +11,21 @@
 @import url(./variaveis.css);
 
 @import url(./componentes/card-link-arquivo.css);
+@import url(./componentes/imagem-grupo.css);
+@import url(./componentes/codigos.css);
+@import url(./componentes/paragrafos-grupo.css);
 
 html{
   scroll-behavior: smooth;
 }
 
-body{
+*{
   font-family: 'Plus Jakarta Sans', sans-serif;
-  background: var(--branco);
-  color: var(--cinza-escuro);
+}
+
+body{
+  /* background: var(--branco); */
+  /* color: var(--cinza-escuro); */
 }
 
 .none{

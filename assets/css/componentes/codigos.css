@@ -1,0 +1,118 @@
+.codigos{
+  margin: var(--margin-componentes-layout);
+  width: 100%;
+}
+
+.codigo{
+  font-size: 1rem;
+  margin: 0;
+  position: relative;
+  white-space: pre-line;
+  margin: 1rem 0;
+}
+
+.codigo code{
+  border-radius: 5px;
+  padding: 0rem 1rem !important;
+  padding-right: 3.5rem !important;
+  min-height: 50px;
+  overflow: auto;
+  background-color: var(--cinza-clarissimo);
+}
+
+.codigo code,
+.codigo code span{
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+.codigo__btn-copiar{
+  color: var(--cor-de-conteudo-botao-copiar);
+  font-size: 1.5rem;
+  border: none;
+  
+  padding: 0.5rem;
+  border-radius: 5px;
+
+  cursor: pointer;
+  
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  outline: none;
+}
+
+.codigo__btn-copiar i{
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  margin-top: 1px;
+}
+
+.codigo__btn-copiar i::before{
+  display: inline-block;
+  font-family: "bootstrap-icons";
+  font-style: normal;
+  text-rendering: auto;
+}
+
+.codigo__btn-copiar.ok i::before{
+  content: "\F733";
+}
+
+.codigo__btn-copiar:is(:hover, :focus){
+  background-color: var(--cor-de-fundo-botao-copiar);
+  color: var(--cor-de-conteudo-botao-copiar-hover);
+}
+
+.codigo__btn-copiar.sucesso i::before{
+  content: "\F724";
+}
+
+.codigo__btn-copiar.sucesso :is(i, span){
+  color: var(--cor-de-conteudo-botao-copiar-sucesso);
+}
+
+.codigo__btn-copiar.erro i::before{
+  content: "\F731";
+}
+
+.codigo__btn-copiar.erro :is(i, span){
+  color: var(--cor-de-conteudo-botao-copiar-erro);
+}
+
+.codigo__btn-copiar span{
+  font-size: 0.8rem;
+  text-align: left;
+  margin-left: 0.4rem;
+  margin-top: 2px;
+  display: none;
+  font-family: sans-serif;
+}
+
+@media screen and (max-width: 412px) {
+  .codigo code{
+    padding: 0 1.25rem !important;
+  }
+
+  .codigo__btn-copiar{
+    background-color: var(--cor-de-fundo-botao-copiar);
+    position: relative;
+    margin-top: 0.25rem;
+    top: initial;
+    right: initial;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: stretch;
+  }
+
+  .codigo__btn-copiar i::after{
+    /* content: ""; */
+    margin-left: 0.5rem;
+    font-size: auto;
+    font-style: normal;
+  }
+
+  .codigo__btn-copiar span{
+    display: block;
+  }
+}

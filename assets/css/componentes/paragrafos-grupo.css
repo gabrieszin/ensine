@@ -1,0 +1,67 @@
+.paragrafos-grupo{
+  margin: var(--margin-componentes-layout);
+  margin-top: 2rem;
+  display: flex;
+  align-content: first baseline;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); */
+  /* grid-column-gap: 2rem; */
+}
+
+.paragrafo{
+  align-items: center;
+  width: calc(50% - 1rem);
+  display: block;
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+
+.paragrafo a{
+  color: var(--azul);
+  font-weight: 600;
+  margin: 0 0.15rem;
+}
+
+.paragrafo a::after{
+  content: "\F1C4";
+} 
+
+.paragrafo a[target="_blank"]::after{
+  content: "\F1C5";
+}
+
+.paragrafo a:is(:hover, :focus){
+  text-decoration: underline;
+}
+
+.paragrafo abbr{
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--verde-escuro);
+}
+
+.paragrafo abbr::after{
+  content: "\F431";
+}
+
+.paragrafo ::after{
+  display: inline-block;
+  font-family: "bootstrap-icons";
+  font-style: normal;
+  text-rendering: auto;
+  font-size: 0.875rem;
+  margin-left: 0.25rem;
+}
+
+.paragrafos-grupo .imagem-grupo :is(.imagem, .descricao){
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .paragrafos-grupo{
+    grid-template-columns: 100%;
+    grid-column-gap: unset;
+  }
+}

@@ -5,6 +5,7 @@
   --cinza-medio: #999999;
   --cinza-claro-forte: #BBBBBB;
   --cinza-claro: #D9D9D9;
+  --cinza-clarissimo: #E2E2E2;
   --azul: #3369F4;
   --verde-escuro: #249A69;
   --verde: #26BB7D;
@@ -12,4 +13,20 @@
   --laranja-escuro: #E54848;
   --vermelho: #F50000;
   --roxo: #7456EC;
+
+  --cor-de-fundo-botao-copiar: rgb(0, 0, 0, 0.1);
+  --cor-de-conteudo-botao-copiar: var(--cinza-medio);
+  --cor-de-conteudo-botao-copiar-sucesso: #185917;
+  --cor-de-conteudo-botao-copiar-erro: #DA3400;
+  --cor-de-fundo-botao-copiar-hover: rgb(0, 0, 0, 0.2);
+  --cor-de-conteudo-botao-copiar-hover: #000;
+}
+
+@media screen and (max-width: 412px) {
+  :root{
+    --cor-de-fundo-botao-copiar: rgb(0, 0, 0, 0.1);
+    --cor-de-conteudo-botao-copiar: rgb(0, 0, 0, 0.7);
+    --cor-de-fundo-botao-copiar-hover: rgb(0, 0, 0, 0.15);
+    --cor-de-conteudo-botao-copiar-hover: #000;
+  }
 }
